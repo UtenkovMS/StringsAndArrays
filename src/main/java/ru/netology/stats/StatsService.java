@@ -22,7 +22,7 @@ public class StatsService {
         return averageSales;
     }
 
-    public long maxMonthSales(long[] sales) {
+    public int maxMonthSales(long[] sales) {
 
         int maxMonth = 0; // первый элемент массива под индексом 0, т.е {80000, ...}
         for (int i = 0; i < sales.length; i++) { // перебирает элементы массива по порядку в пределах массива
@@ -34,7 +34,7 @@ public class StatsService {
     }
 
 
-    public long minMonthSales(long[] sales) {
+    public int minMonthSales(long[] sales) {
 
         int minMonth = 0; // первый элемент массива под индексом 0, т.е {80000, ...}
         for (int i = 0; i < sales.length; i++) { // перебирает элементы массива по порядку в пределах массива
@@ -45,7 +45,7 @@ public class StatsService {
         return minMonth + 1; // месяцы нумеруются с 1, а индексы массива с 0, нужно выровнять значение на 1
     }
 
-    public long salesBelowAverage(long[] sales) {
+    public int salesBelowAverage(long[] sales) {
 
         double averageSales = averageSales(sales); // вызов метода расчета средних продаж
 
@@ -59,7 +59,7 @@ public class StatsService {
         return belowAverage;
     }
 
-    public long salesMoreAverage(long[] sales) {
+    public int salesMoreAverage(long[] sales) {
 
         double averageSales = averageSales(sales); // вызов метода расчета средних продаж
         int moreAverage = 0; // первый элемент массива под индексом 0, т.е {80000, ...}
